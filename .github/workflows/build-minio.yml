@@ -78,8 +78,7 @@ jobs:
         include:
           - arch: amd64
             runner: ubuntu-24.04
-          - arch: arm64
-            runner: ubuntu-24.04-arm
+
     runs-on: ${{ matrix.runner }}
     needs: check-release
     if: needs.check-release.outputs.should_build == 'true'
